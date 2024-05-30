@@ -1,0 +1,39 @@
+/* The file encoding is ANSI */
+
+:init
+name = "Player"
+goto main
+
+:main
+pln #name$, what do you want to do?
+if inv_Coin < 1 then btn Coin_take, Pick up a coin.
+if inv_Coin > 0 then btn use_Coin_flip, Flip a coin.
+if inv_Coin > 0 then btn use_Coin_drop, Drop a coin.
+btn enter, Enter name.
+end
+
+:Coin_take
+inv+ Coin
+goto use_Coin_examine
+
+:use_Coin_examine
+cls
+pln An ordinary coin with heads and tails.
+goto main
+
+:use_Coin_flip
+cls
+p It came up 
+if rnd2 = 1 then pln heads. else pln tails.
+goto main
+
+:use_Coin_drop
+cls
+inv- Coin
+goto main
+
+:enter
+pln Enter your name:
+input name
+cls
+goto main
