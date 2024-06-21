@@ -2,7 +2,8 @@
 
 /**
  * Copyright (C) 2024 Nikita Tseykovets <tseikovets@rambler.ru>
- * Copyright (C) narmiel (UrqW project from which part of code is borrowed)
+ * Copyright (C) 2015, 2016 Akela <akela88@bk.ru>
+ *     (UrqW project from which part of code is borrowed)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -45,6 +46,7 @@ inventory_element.setAttribute('lang', inventory_lang);
 
 /**
  * Modifying inventory drawing function
+ * from UrqW (/js/Client.js)
  * to restore default language for empty inventory item
  */
 Client.prototype.drawInventory = function () {
